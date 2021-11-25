@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      crossorigin="anonymous"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link
+    crossorigin="anonymous"
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <script crossorigin="anonymous" src="https://unpkg.com/vue@next" /></script>
+    <title>Dépenses</title>
+  </head>
+  <body>
+    <section class="section">
+      <div id="app" class="container">
+        <h1 class="title is-1">Dépenses</h1>
+   
+        <section class=' mt-2'>
+        <h2 class="title is-2">Nouvelle dépense</h2>
+        <form action="">
+          <div class="field">
+            <label class="label">Titre</label>
+            <div class="control">
+              <input name="title" v-model="title" title="title" class="input" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Montant</label>
+            <div class="control">
+              <input name="amount" v-model="amount" title="amount" class="input" />
+            </div>
+          </div>
+
+          <div v-if="error"  class="notification is-danger">
+            {{ error }}
+          </div>
+
+          <button type="submit" class="button is-primary" @click="addExpenseAction($event)">Valider</button>
+          <button type="button" class="button ml-2" @click="reinitAction">Réinitialiser</button>
+        </form>
+        </section>
+
+        <section class="mt-2">
+
+        <h2 class="title is-2 mt-6">Liste des dépenses </h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Dépense</th>
+                        <th>Montant</th>
+                        <th>Opérations</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(expense,index) in expenses" :key="index"
+                    >
+                    <td>{{ expense.title}}</td>
+                    <td>{{ expense.amount}}€</td>
+                    <th><button type='button' class="button is-warning" @click="deleteExpense(expense)">supprimer</button></th>
+                </tr>
+                <tfoot>
+                    <tr>
+                    <th>Total</th>
+                    <th>{{ total }}€</th>
+                    <th></th>
+                    </tr>
+                </tfoot>
+                </tbody>
+            </table>
+  
+        </section>
+      </div>
+    </section>
+    <script type="module" src="./app.js" ></script>
+
+  </body>
+</html>

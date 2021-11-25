@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const placeOfBirthCode = "fr";
+      let placeOfBirth;
+
+      switch (placeOfBirthCode) {
+        case "en":
+          placeOfBirth = "Angleterre";
+          break;
+        case "fr":
+          placeOfBirth = "France";
+          break;
+        case "de":
+          placeOfBirth = "Allemagne";
+          break;
+        default:
+          placeOfBirth = "Dans une contrée lointaine et inconnue ...";
+          break;
+      }
+
+      console.log(`Je suis né en ${placeOfBirth}`);
+    </script>
+  </body>
+</html>

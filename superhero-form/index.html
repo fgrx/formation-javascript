@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      crossorigin="anonymous"
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="" />
+    <title>Validation de formulaire</title>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title is-1">Formulaire de création de super héro</h1>
+
+        <form action="./page2.html" id="superHeroForm">
+          <div class="field">
+            <label for="name">Nom</label>
+            <div class="control">
+              <input title="name" name="name" class="input" type="text" />
+              <p class="help is-danger"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="universe">Univers</label>
+            <div class="control">
+              <div class="select">
+                <select name="universe" id="universe">
+                  <option value=""></option>
+                  <option value="real">Monde réel</option>
+                  <option value="marvel">Marvel</option>
+                  <option value="dc">DC</option>
+                  <option value="other">Autre</option>
+                </select>
+              </div>
+              <p class="help is-danger"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Adresse email</label>
+            <div class="control">
+              <input title="email" name="email" class="input" type="text" />
+              <p class="help is-danger"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="age">Age</label>
+            <div class="control">
+              <input title="age" name="age" class="input" type="text" />
+              <p class="help is-danger"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="superpower">Superpouvoir</label>
+            <div class="control">
+              <input
+                title="superpower"
+                name="superpower"
+                class="input"
+                type="text"
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="button is-primary" id="validateButton">
+            Valider
+          </button>
+          <button type="button" class="button" id="reinitButton">
+            Réinitialiser
+          </button>
+        </form>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
