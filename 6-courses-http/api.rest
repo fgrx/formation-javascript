@@ -1,0 +1,10 @@
+###
+GET http://localhost:3000/shopping
+
+###
+POST http://localhost:3000/shopping
+Content-Type: application/json
+
+{
+    "title":"tomates"
+}
