@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fonctions</title>
+  </head>
+  <body>
+    <h1>Fonctions</h1>
+    <h2>Ouvrir la console</h2>
+    <script>
+      //Fonction classique
+      function welcomeActor(firstname, lastname, gender) {
+        const abreviation = gender === "m" ? "Mr" : "Mme";
+        return `Welcome ${abreviation} ${firstname} ${lastname}`;
+      }
+
+      console.log(welcomeActor("Dwayne", "Johnson", "m"));
+
+      //Fonction affectée à une constante
+      const BonjourActor = function (firstname, lastname, gender) {
+        const abreviation = gender === "m" ? "Mr" : "Mme";
+        return `Welcome ${abreviation} ${firstname} ${lastname}`;
+      };
+
+      console.log(welcomeActor("Julia", "Roberts", "f"));
+
+      //Arrow function
+      const tva = 1.2;
+      const priceWithTVA = (price) => price * tva;
+      const price = 200;
+      console.log(priceWithTVA(price));
+    </script>
+  </body>
+</html>

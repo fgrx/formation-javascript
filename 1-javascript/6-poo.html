@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>POO</title>
+  </head>
+  <body>
+    <h1>POO</h1>
+    <h2>Ouvrir la console</h2>
+    <script>
+      ////////////////////// Version classes
+
+      class Personne {
+        firstname;
+        lastname;
+
+        constructor(firstname, lastname) {
+          this.firstname = firstname;
+          this.lastname = lastname;
+        }
+
+        walk(distance) {
+          console.log(
+            `${this.firstname} ${this.lastname} marche ${distance}km`
+          );
+        }
+      }
+
+      const individu = new Personne("Michel", "Dupont");
+      individu.walk(10);
+
+      ////héritage;
+      class Codeur extends Personne {
+        language;
+        constructor(firstname, lastname, language) {
+          super(firstname, lastname);
+          this.language = language;
+        }
+
+        code(duration) {
+          console.log(
+            `${this.firstname} ${this.lastname} code ${duration} heures en ${this.language}`
+          );
+        }
+      }
+
+      const evanYou = new Codeur("Evan", "You", "Javascript");
+      evanYou.walk(5);
+      evanYou.code(2);
+
+      ////////////////////Version fonctions
+
+      //Création d'une classe
+      function personneFn(firstname, lastname) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+
+        this.walk = (distance) =>
+          console.log(
+            `${this.firstname} ${this.lastname} marche ${distance}km`
+          );
+      }
+
+      const individu2 = new personneFn("Gustave", "Lambert");
+      individu2.walk(10);
+
+      const codeurFn = personneFn;
+
+      codeurFn.prototype.code = function (duration) {
+        console.log(
+          `${this.firstname} ${this.lastname} code ${duration} heures en ${this.language}`
+        );
+      };
+
+      const richardStallman = new codeurFn("Richard", "Stallman");
+      richardStallman.language = "C, C++";
+      richardStallman.walk(5);
+      richardStallman.code(2);
+    </script>
+  </body>
+</html>

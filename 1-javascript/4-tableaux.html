@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tableaux & objets</title>
+  </head>
+  <body>
+    <h1>Tableaux & objets</h1>
+    <h2>Ouvrir la console</h2>
+
+    <script type="module">
+      import actors from "./actors.js";
+
+      //Nombre d'acteurs
+      console.log("Nombre d'acteurs : ", actors.length);
+
+      //Accéder à un élément du tableau
+      console.log(actors[3]);
+
+      //Accéder à un paramètre d'un objet
+      const juliaRoberts = actors[3];
+      console.log(juliaRoberts.paid);
+
+      // Ajouter un acteur
+      const newActor = {
+        firstname: "Brad",
+        lastname: "Pitt",
+        film: "Bullet Train",
+        paid: 20000000,
+        gender: "m",
+      };
+
+      actors.push(newActor);
+      console.log("Ajout de Bradd Pitt", actors);
+
+      //delete actor
+      const indexToDelete = actors.findIndex(
+        (actor) => actor.lastname === "Johnson"
+      );
+      actors.splice(indexToDelete, 1);
+      console.log(actors);
+
+      //filter
+      const femaleActors = actors.filter((actor) => actor.gender === "f");
+      console.log("Liste des actrices", femaleActors);
+
+      // Reduce
+      const sumTotalReduce = actors.reduce(
+        (accumulator, actor) => accumulator + actor.paid,
+        0
+      );
+      console.log(`Total des salaires : ${sumTotalReduce} $`);
+
+      //Ranger le tableau avec Sort
+      const comparisonFunction = function (a, b) {
+        return b.paid - a.paid;
+      };
+      const orderedActors = actors.sort(comparisonFunction);
+      console.log("Acteurs triés par salaire : ", orderedActors);
+    </script>
+  </body>
+</html>

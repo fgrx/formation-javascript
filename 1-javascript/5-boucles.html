@@ -4,31 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Boucles</title>
   </head>
   <body>
+    <h1>Les boucles</h1>
+    <h2>Ouvrir la console</h2>
     <script type="module">
       import actors from "./actors.js";
-      // Ajouter un acteur
-      const newActor = {
-        firstname: "Brad",
-        lastname: "Pitt",
-        film: "Bullet Train",
-        paid: 20000000,
-        gender: "m",
-      };
 
-      actors.push(newActor);
-      console.log("Ajout de Bradd Pitt", actors);
-
-      console.log("Nombre d'acteurs : ", actors.length);
-
+      //Boucle for
       let filmList = "";
       for (let i = 0; i < actors.length; i++) {
         filmList += `${actors[i].film},`;
       }
       console.log(`Liste des films : ${filmList}`);
 
+      //Boucle while
       let counter = 0;
       let actorsList = "";
       while (counter < actors.length) {
@@ -37,24 +28,10 @@
       }
       console.log(`Liste des acteurs : ${actorsList}`);
 
+      // Foreach
       let sumTotalForEach = 0;
       actors.forEach((actor) => (sumTotalForEach += actor.paid));
       console.log(`Total des salaires : ${sumTotalForEach} $`);
-
-      const sumTotalReduce = actors.reduce(
-        (accumulator, actor) => accumulator + actor.paid,
-        0
-      );
-      console.log(`Total des salaires : ${sumTotalReduce} $`);
-
-      const femaleActors = actors.filter((actor) => actor.gender === "f");
-      console.log("Liste des actrices", femaleActors);
-
-      const comparisonFunction = function (a, b) {
-        return b.paid - a.paid;
-      };
-      const orderedActors = actors.sort(comparisonFunction);
-      console.log("Acteurs triés par salaire : ", orderedActors);
     </script>
   </body>
 </html>
