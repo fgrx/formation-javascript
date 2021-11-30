@@ -19,11 +19,9 @@ class ShoppingService {
     return false;
   }
 
-  async deleteItem(itemID) {
+  deleteItem(itemID) {
     try {
-      const result = await axios.delete(
-        `http://localhost:3000/shopping/${itemID}`
-      );
+      const result = axios.delete(`http://localhost:3000/shopping/${itemID}`);
       return result;
     } catch (error) {
       alert("Une erreur serveur est survenue");
