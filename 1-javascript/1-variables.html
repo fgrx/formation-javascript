@@ -16,6 +16,18 @@
       nom = "johnson";
       const age = 49;
 
+      console.log(typeof nom); //string
+      console.log(typeof age); //number
+
+      let ageString = "49";
+      console.log("ageString est un ", typeof ageString); //string
+
+      ageString = parseInt(ageString); // ou +ageString
+      console.log("ageString est un ", typeof ageString); //number
+
+      ageString = ageString.toString();
+      console.log("ageString est un ", typeof ageString); //string
+
       console.log(prenom + " " + nom + " " + age + " ans");
       console.log(`${prenom} ${nom} ${age} ans`);
 
