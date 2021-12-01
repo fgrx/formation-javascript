@@ -1,0 +1,10 @@
+#area {
+  height: 100%;
+  width: 100%;
+}
+
+.figure {
+  height: 200px;
+  width: auto;
+  position: absolute;
+}

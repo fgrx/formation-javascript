@@ -22,8 +22,20 @@
     <section class="section">
       <div class="container">
         <h1 class="title is-1">Compte à rebours</h1>
-        <button id="startButton" class="button is-primary">Commencer</button>
-        <button id="stopButton" class="button is-primary">Arrêter</button>
+        <button
+          id="startButton"
+          class="button is-primary"
+          onclick="startCounterAction()"
+        >
+          Commencer
+        </button>
+        <button
+          id="stopButton"
+          class="button is-primary"
+          onclick="stopCounterAction()"
+        >
+          Arrêter
+        </button>
         <div id="countdown"></div>
       </div>
     </section>

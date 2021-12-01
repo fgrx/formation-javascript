@@ -2,7 +2,6 @@
 const maxSteps = 5;
 const minSteps = 1;
 const steps = Math.floor(Math.random() * (maxSteps - minSteps)) + minSteps;
-console.log(steps);
 
 // Récupère l'endroit où devra s'afficher le compteur
 const countdownElement = document.getElementById("countdown");
@@ -15,14 +14,14 @@ let intervalId;
 let currentStep;
 
 // Fonction qui lance le timer & le réinitialise
-startButtonElement.addEventListener("click", function () {
+startCounterAction = function () {
   currentStep = steps;
   startTimer();
-});
+};
 
-stopButtonElement.addEventListener("click", function () {
+stopCounterAction = function () {
   clearInterval(intervalID);
-});
+};
 
 // fonction qui se lance à chaque passage dans l'interval
 const countDown = function () {

@@ -8,9 +8,7 @@ const { name, age, superpower, universe, email } = superHeroFormElements;
 
 //Récupération des boutons
 const validateButtonElement = document.getElementById("validateButton");
-const reinitButtonElement = document.getElementById("reinitButton");
 
-reinitButtonElement.addEventListener("click", () => reinitAction());
 validateButtonElement.addEventListener("click", (event) =>
   validateAction(event)
 );

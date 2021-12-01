@@ -10,14 +10,22 @@ if (!localStorage.getItem("cookieConsent")) {
 }
 
 // Récupère les boutons qui ont la classe closeButton
-const closeButtonsCollection = document.getElementsByClassName("closeButton");
+// const closeButtonsCollection = document.getElementsByClassName("closeButton");
 
 // Attache un évenement qui permet de fermer la boite modale
-for (closeButton of closeButtonsCollection) {
-  closeButton.addEventListener("click", () => {
+// for (closeButton of closeButtonsCollection) {
+//   closeButton.addEventListener("click", () => {
+//     modal.classList.remove("is-active", "is-clipped");
+//   });
+// }
+
+// Version Queryselector
+const closeButtons = document.querySelectorAll(".closeButton");
+closeButtons.forEach((closeButton) => {
+  closeButton.onclick = function () {
     modal.classList.remove("is-active", "is-clipped");
-  });
-}
+  };
+});
 
 // Attache un évenement aux boutons d'acceptation et de refus des cookies
 const acceptCookieButton = document.getElementById("acceptCookieButton");
