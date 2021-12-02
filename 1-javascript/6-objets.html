@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Les objets</title>
+  </head>
+  <body>
+    <h1>Variables et constantes</h1>
+    <h2>Ouvrir la console</h2>
+
+    <script>
+      //Création d'un objet
+      const player1 = {
+        firstname: "Roger",
+        lastname: "federer",
+        born: { country: "Suisse" },
+      };
+
+      console.log(
+        `Je m'appelle ${player1.firstname} ${player1.lastname} né en ${player1.born.country}`
+      );
+      //Je m'appelle Roger federer né en Suisse
+
+      //Ajout & exécution d'une méthode
+      player1.serve = function (speed) {
+        console.log(`je sers à ${speed}kmh`);
+      };
+
+      player1.serve(200);
+
+      //Duplication qui ne marche pas
+      const player2 = player1;
+      player2.firstname = "Rafael";
+      console.log(
+        `Je m'appelle ${player1.firstname} ${player1.lastname} né en ${player1.born.country}`
+      );
+      //Je m'appelle Rafael federer né en Suisse 😱
+      player1.firstname = "Roger";
+
+      //Duplication d'un objet
+      //const player3 = Object.create(player1); //ou {...player1}
+      const player3 = JSON.parse(JSON.stringify(player1)); //ou librairy lodash ou rfc car c'est hacky et risque d'erreurs
+      player3.firstname = "Novak";
+      player3.born.country = "Serbie";
+      console.log("player3 :", player3);
+
+      player3.serve(210);
+
+      console.log(
+        `Je m'appelle ${player1.firstname} ${player1.lastname} né en ${player1.born.country}`
+      );
+    </script>
+  </body>
+</html>

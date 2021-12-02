@@ -59,6 +59,23 @@
       };
       const orderedActors = actors.sort(comparisonFunction);
       console.log("Acteurs triés par salaire : ", orderedActors);
+
+      //Concaténer deux tableaux
+      const germanCars = ["Audi", "Mercedes", "BMW", "Volkswagen"];
+      const frenchCars = ["Citroen", "Peugeot", "Renault"];
+      const allCars = [...frenchCars, ...germanCars];
+      console.log("Toutes les voitures : ", allCars);
+
+      //Duplication de tableaux
+      let japaneseCars = ["Toyota", "Honda", "Mazda"];
+      let japaneseCarsCopy = japaneseCars;
+      japaneseCarsCopy.push("Subaru");
+      console.log(japaneseCars); //Subaru est aussi ajouté dans le tableau parent !!! 😱
+
+      japaneseCars = ["Toyota", "Honda", "Mazda"];
+      japaneseCarsCopy = [...japaneseCars];
+      japaneseCarsCopy.push("Subaru");
+      console.log(japaneseCars); //La c'est bon !
     </script>
   </body>
 </html>
