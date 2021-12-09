@@ -40,4 +40,3 @@ Voir les exercices en démo sur [https://fgrx-formation-js.netlify.app](https://
 - Exercices POST/DELETE/GET
 - Exercice "liste de course"
 - Présentation de Vue.js
-- Exercice Vue.js
