@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sélecteurs</title>
+  </head>
+  <body>
+    <h1>Sélecteurs</h1>
+    <ul id="persons">
+      <li class="firstname">Cyrielle</li>
+      <li class="firstname">Marc</li>
+      <li class="firstname">Nathalie</li>
+      <li class="firstname">Jules</li>
+    </ul>
+
+    <script>
+      const h1 = document.getElementsByTagName("h1");
+      console.log(h1[0].innerHTML);
+
+      // Selection par classe
+      //   const persons = document.getElementsByClassName("firstname");
+      //   for (const person of persons) {
+      //     console.log(person.innerHTML);
+      //   }
+
+      // Meme chose avec les childrens
+      //   const personsList = document.getElementById("persons");
+      //   for (const person of personsList.children) {
+      //     console.log(person.innerHTML);
+      //   }
+
+      // selection avec les queries selectors
+      const personList = document.querySelectorAll(".firstname");
+      personList.forEach((person) => console.log(person.innerHTML));
+    </script>
+  </body>
+</html>

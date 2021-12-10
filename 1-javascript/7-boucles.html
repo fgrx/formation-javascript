@@ -19,6 +19,13 @@
       }
       console.log(`Liste des films : ${filmList}`);
 
+      // for of
+      let firstnames = "";
+      for (const actor of actors) {
+        firstnames += actor.firstname + " ";
+      }
+      console.log("liste des prenoms", firstnames);
+
       //Boucle while
       let counter = 0;
       let actorsList = "";

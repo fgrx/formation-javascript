@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le DOM</title>
+    <style>
+      #square {
+        height: 200px;
+        width: 200px;
+        margin-left: 20vh;
+        margin-top: 20vh;
+        background: rebeccapurple;
+      }
+
+      .borders {
+        border: 3px solid red;
+      }
+
+      .in-pink {
+        background-color: pink !important;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Le DOM</h1>
+
+    <h2>Passez ou cliquez sur le carré avec la souris</h2>
+
+    <div
+      id="square"
+      onmouseover="toggleBackgroundAction()"
+      onmouseleave="toggleBackgroundAction()"
+      onclick="addBordersAction()"
+    ></div>
+
+    <button onclick="reinitAction()">Réinitialiser les css</button>
+    <button onclick="hasBorderAction()">Classe bordure ?</button>
+
+    <script>
+      const square = document.getElementById("square");
+
+      square.style.background = "blue";
+
+      function addBordersAction() {
+        square.classList.add("borders");
+      }
+
+      function toggleBackgroundAction() {
+        square.classList.toggle("in-pink");
+      }
+
+      function reinitAction() {
+        square.classList.remove("borders");
+      }
+
+      function hasBorderAction() {
+        square.classList.contains("borders")
+          ? console.log("A des bordures")
+          : console.log("N'a pas de bordures");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le DOM</title>
+    <style>
+      #square {
+        height: 200px;
+        width: 200px;
+        margin-left: 20vh;
+        margin-top: 20vh;
+        background: rebeccapurple;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Le DOM</h1>
+
+    <h2>Passez ou cliquez sur le carré avec la souris</h2>
+
+    <div id="square" onclick="displayAlertAction()"></div>
+
+    <script>
+      // Evénement au chargement de la page
+      window.onload = function () {
+        console.log("Ma page est chargée");
+      };
+
+      const square = document.getElementById("square");
+
+      //Evenement au click
+      // square.addEventListener("mouseover", (event) => {
+      //   console.log("Au dessus", event);
+      // });
+
+      square.onmouseover = (event) => console.log("Au dessus", event);
+
+      function displayAlertAction() {
+        alert("cliqué ! ");
+      }
+    </script>
+  </body>
+</html>
