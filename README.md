@@ -9,12 +9,14 @@ Voir les exercices en démo sur [https://fgrx*formation*js.netlify.app](https://
 - Fonctions
 - DOM Evenements
 - Exercice compteur
-- Exercice Cookie Consent (localStorage)
-- DOM CSS
-- Exercice Timer (timers)
+- Timers
+- Exercice countdown (timers)
 - Tableaux
 - Boucles
 - DOM Sélecteurs
+- DOM CSS
+- Cookies & Localstorage
+- Exercice Cookie Consent (localStorage)
 - Objets
 - Exercice Formulaire
 - DOM Manipulation

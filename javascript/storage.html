@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookies & localstorage</title>
+  </head>
+  <body>
+    <h1>Cookies & localstorage</h1>
+    <h2>Ouvrir la console</h2>
+    <script>
+      //Cookies
+      document.cookie = "name=Fabien";
+      console.log(document.cookie);
+
+      //localstorage
+      //localStorage.setItem("pet", "🐱");
+      console.log(localStorage.getItem("pet"));
+
+      // sessionstorage
+      //sessionStorage.setItem("food", "🍕");
+      console.log(sessionStorage.getItem("food"));
+    </script>
+  </body>
+</html>

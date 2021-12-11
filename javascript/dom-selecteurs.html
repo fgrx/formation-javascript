@@ -16,8 +16,12 @@
     </ul>
 
     <script>
-      const h1 = document.getElementsByTagName("h1");
-      console.log(h1[0].innerHTML);
+      const h1Elements = document.getElementsByTagName("h1");
+      console.log(h1Elements[0].innerHTML);
+
+      // Voir le parent
+      const h1ParentElement = h1Elements[0].parentElement;
+      console.log(h1ParentElement);
 
       // Selection par classe
       //   const persons = document.getElementsByClassName("firstname");
