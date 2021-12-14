@@ -17,9 +17,9 @@ Voir les exercices en démo sur [https://fgrx*formation*js.netlify.app](https://
 - Boucles
 - DOM Sélecteurs
 - DOM CSS
+- Exercice Formulaire
 - Cookies & Localstorage
 - Exercice Cookie Consent (localStorage)
-- Exercice Formulaire
 - DOM Manipulation
 - Programmation orientée objets
 - Exercice Pikachu & Shrek

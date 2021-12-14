@@ -20,14 +20,15 @@ async function displayItems() {
 
 //Lors du click sur le bouton d'ajout
 const formShoppingListElement = document.getElementById("shoppingListForm");
+const formElements = formShoppingListElement.elements;
 
 formShoppingListElement.addEventListener("submit", async (event) => {
   event.preventDefault();
-  const itemFieldElement = document.getElementById("itemField");
+  const { itemToBuy } = formElements;
 
-  if (itemFieldElement.value) {
+  if (itemToBuy.value) {
     // Ajout en utilisant l'api rest
-    const newItem = { title: itemFieldElement.value, date: new Date() };
+    const newItem = { title: itemToBuy.value, date: new Date() };
     const newItemFromDB = await shoppingService.addItem(newItem);
     const newItemElement = listManager.createItemInList(newItemFromDB);
     shoppingListElement.children[0].append(newItemElement);

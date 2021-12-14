@@ -4,7 +4,7 @@ const formElement = document.getElementById("superHeroForm");
 // Récupération des champs du formulaire
 const superHeroFormElements = formElement.elements;
 
-const { name, age, superpower, universe, email } = superHeroFormElements;
+const { heroName, age, superpower, universe, email } = superHeroFormElements;
 
 //Récupération des boutons
 const validateButtonElement = document.getElementById("validateButton");
@@ -18,11 +18,13 @@ const errorsElement = document.getElementById("errorsList");
 
 function reinitAction() {
   //Réinitialisation des valeurs du formulaire
-  name.value = "";
-  age.value = "";
-  superpower.value = "";
-  universe.value = "";
-  email.value = "";
+  // heroName.value = "";
+  // age.value = "";
+  // superpower.value = "";
+  // universe.value = "";
+  // email.value = "";
+
+  formElement.reset();
 
   reinitErrors();
 }
@@ -46,9 +48,9 @@ function validateAction(event) {
   event.preventDefault();
 
   //Vérifie que le nom du super héro fait au moins 3 charactères
-  if (!name.value || name.value.length <= 3) {
+  if (!heroName.value || heroName.value.length <= 3) {
     const error = {
-      field: name,
+      field: heroName,
       message: "le nom du super héro doit faire au moins 3 charactères",
     };
     errors.push(error);
