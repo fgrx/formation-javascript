@@ -19,7 +19,7 @@
       };
 
       console.log(
-        `Je m'appelle ${player1.firstname} ${player1.lastname} né en ${player1.born.country}`
+        `Je m'appelle ${player1["firstname"]} ${player1.lastname} né en ${player1.born.country}`
       );
       //Je m'appelle Roger federer né en Suisse
 
@@ -46,11 +46,25 @@
       player3.born.country = "Serbie";
       console.log("player3 :", player3);
 
-      player3.serve(210);
+      //player3.serve(210);
 
       console.log(
         `Je m'appelle ${player1.firstname} ${player1.lastname} né en ${player1.born.country}`
       );
+
+      // Utilisation des objets
+      function displayCountry(countryCode) {
+        const countryStrings = {
+          fr: "France",
+          en: "Angleterre",
+          de: "Allemagne",
+          es: "Espagne",
+        };
+
+        return countryStrings[countryCode] ?? "une contrée lointaine";
+      }
+
+      console.log(displayCountry("de"));
     </script>
   </body>
 </html>

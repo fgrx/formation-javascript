@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math</title>
+  </head>
+  <body>
+    <h1>Math</h1>
+
+    <script>
+      const nb = 42.5354667;
+
+      console.log("arrondit inférieur", Math.floor(nb));
+      console.log("arrondit inférieur", Math.ceil(nb));
+      console.log("arrondit inférieur", Math.round(nb));
+
+      console.log(Math.max(42, 20, 3, 65));
+      console.log(Math.min(42, 20, 3, 65));
+
+      console.log(Math.random());
+      //nombre entre un et 5
+      const max = 5;
+      const min = 1;
+      console.log(Math.floor(Math.random() * (max - min) + min));
+    </script>
+  </body>
+</html>

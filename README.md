@@ -11,13 +11,14 @@ Voir les exercices en démo sur [https://fgrx*formation*js.netlify.app](https://
 - Exercice compteur
 - Timers
 - Exercice countdown (timers)
+- Math
+- Objets
 - Tableaux
 - Boucles
 - DOM Sélecteurs
 - DOM CSS
 - Cookies & Localstorage
 - Exercice Cookie Consent (localStorage)
-- Objets
 - Exercice Formulaire
 - DOM Manipulation
 - Programmation orientée objets

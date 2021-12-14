@@ -39,6 +39,11 @@
       let sumTotalForEach = 0;
       actors.forEach((actor) => (sumTotalForEach += actor.paid));
       console.log(`Total des salaires : ${sumTotalForEach} $`);
+
+      //map transforme les salaires en dollars en euros
+      const dollars = 0.87;
+      const actorsWithPaidInEuros = actors.map((actor) => actor.paid * 0.87);
+      console.log(actorsWithPaidInEuros);
     </script>
   </body>
 </html>

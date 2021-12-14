@@ -7,13 +7,6 @@ export default [
     gender: "f",
   },
   {
-    firstname: "Will",
-    lastname: "Smith",
-    film: "King Richard",
-    paid: 40000000,
-    gender: "m",
-  },
-  {
     firstname: "Daniel",
     lastname: "Craig",
     film: "À couteaux tirés",

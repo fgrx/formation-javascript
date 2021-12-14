@@ -26,6 +26,24 @@
 
       console.log(response);
 
+      //Opération ternaires
+      let majeurMineur = age >= 18 ? "Personne majeure" : "Personne mineure";
+
+      //difference entre == et ===
+      const ageString = "66";
+      if (age == ageString) {
+        console.log("les deux sont égales");
+      }
+
+      //différence entre null et undefined
+      let maVar;
+
+      if (maVar) {
+        console.log("Ma var est définie");
+      } else {
+        console.log("Ma var est indéfinie");
+      }
+
       // conditions avec switch
 
       const placeOfBirthCode = "fr";
