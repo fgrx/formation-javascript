@@ -1,7 +1,9 @@
 class ShoppingService {
+  serverApiUrl = "https://shoppinglist-formation.herokuapp.com/shopping";
+
   async getItems() {
     try {
-      const result = await fetch("http://localhost:3000/shopping");
+      const result = await fetch(this.serverApiUrl);
       return result.json();
     } catch (error) {
       alert("Une erreur serveur est survenue");
@@ -11,7 +13,7 @@ class ShoppingService {
 
   async addItem(item) {
     try {
-      const result = await fetch("http://localhost:3000/shopping", {
+      const result = await fetch(this.serverApiUrl, {
         method: "POST",
         body: JSON.stringify(item),
         headers: {
@@ -19,7 +21,8 @@ class ShoppingService {
           "Content-Type": "application/json",
         },
       });
-      return result.json;
+      const resultJSON = result.json();
+      return await resultJSON;
     } catch (error) {
       alert("Une erreur serveur est survenue");
     }
@@ -28,7 +31,7 @@ class ShoppingService {
 
   deleteItem(itemID) {
     try {
-      const result = fetch(`http://localhost:3000/shopping/${itemID}`, {
+      const result = fetch(`${this.serverApiUrl}/${itemID}`, {
         method: "DELETE",
       });
       return result;

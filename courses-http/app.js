@@ -8,9 +8,9 @@ let items = [];
 
 displayItems();
 
-async function displayItems() {
-  const shoppingListElement = document.getElementById("shoppingList");
+const shoppingListElement = document.getElementById("shoppingList");
 
+async function displayItems() {
   //Récupération des items
   items = await shoppingService.getItems();
 

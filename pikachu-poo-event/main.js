@@ -2,8 +2,8 @@ import Personnage from "./lib/personnage.js";
 
 const area = document.getElementById("area");
 
-const pikachu = new Personnage("pikachu.png", 200, 200, 8);
-const shrek = new Personnage("shrek.png", 800, 300, 3);
+const pikachu = new Personnage("./images/pikachu.png", 200, 200, 8);
+const shrek = new Personnage("./images/shrek.png", 800, 300, 3);
 
 const figures = [pikachu, shrek];
 
@@ -30,10 +30,7 @@ document.addEventListener("keydown", (event) => {
 });
 
 //fait swinger les personnages
-figures.forEach((figure) =>
-  figure.image.addEventListener("mouseenter", () => figure.dance())
-);
-
-figures.forEach((figure) =>
-  figure.image.addEventListener("mouseleave", () => figure.stand())
-);
+figures.forEach((figure) => {
+  figure.image.addEventListener("mouseenter", () => figure.dance());
+  figure.image.addEventListener("mouseleave", () => figure.stand());
+});

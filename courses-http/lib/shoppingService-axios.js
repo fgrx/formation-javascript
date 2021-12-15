@@ -1,7 +1,9 @@
 class ShoppingService {
+  serverApiUrl = "https://shoppinglist-formation.herokuapp.com/shopping";
+
   async getItems() {
     try {
-      const result = await axios.get("http://localhost:3000/shopping");
+      const result = await axios.get(this.serverApiUrl);
       return result.data;
     } catch (error) {
       alert("Une erreur serveur est survenue");
@@ -11,7 +13,7 @@ class ShoppingService {
 
   async addItem(item) {
     try {
-      const result = await axios.post("http://localhost:3000/shopping", item);
+      const result = await axios.post(this.serverApiUrl, item);
       return result.data;
     } catch (error) {
       alert("Une erreur serveur est survenue");
@@ -21,7 +23,7 @@ class ShoppingService {
 
   deleteItem(itemID) {
     try {
-      const result = axios.delete(`http://localhost:3000/shopping/${itemID}`);
+      const result = axios.delete(`${this.serverApiUrl}/${itemID}`);
       return result;
     } catch (error) {
       alert("Une erreur serveur est survenue");

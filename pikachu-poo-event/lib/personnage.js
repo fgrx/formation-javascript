@@ -2,11 +2,12 @@ class Personnage {
   image;
   positionX;
   positionY;
+  speed;
 
-  constructor(photo, x, y, speed) {
+  constructor(photoURL, x, y, speed) {
     this.image = document.createElement("img");
     this.image.classList.add("figure");
-    this.image.src = `./images/${photo}`;
+    this.image.src = photoURL;
 
     this.positionX = x;
     this.positionY = y;

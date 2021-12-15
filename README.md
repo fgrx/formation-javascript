@@ -26,3 +26,7 @@ Voir les exercices en démo sur [https://fgrx*formation*js.netlify.app](https://
 - API
 - Exercice liste de courses
 - Exercice final : Carousel
+
+## URL du serveur API REST
+
+https://shoppinglist-formation.herokuapp.com/shoppping
