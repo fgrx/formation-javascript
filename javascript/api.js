@@ -1,13 +1,13 @@
 const url = "https://randomuser.me/api/?results=10";
 
-// // Fetch
+// Fetch
 console.log("Début fetch");
 fetch(url)
   .then((response) => response.json())
   .then((response) => console.log(response.results));
 console.log("Fin du fetch");
 
-// Les promises
+// // Les promises
 // function getDatasFetch() {
 //   return new Promise((resolve, reject) => {
 //     fetch(url)
@@ -20,8 +20,8 @@ console.log("Fin du fetch");
 // console.log("Début du fetch");
 // getDatasFetch().then((results) => console.log("Fin du fetch", results));
 
+// // Versions await
 // async function getDatasFetch() {
-//   console.log("Début fetch");
 //   const response = await fetch(url);
 //   const responseJSON = await response.json();
 //   console.log(responseJSON.results);
@@ -29,6 +29,7 @@ console.log("Fin du fetch");
 //   return response;
 // }
 
+// console.log("Début fetch");
 // getDatasFetch();
 
 // //Récupération des données avec async/await et axios
