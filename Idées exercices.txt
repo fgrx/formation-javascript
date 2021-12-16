@@ -1,0 +1,3 @@
+Idées exercices
+* Gérer collision pikachu shrek
+* Liste de course ajouter la quantité et pouvoir la modifier par la suite

@@ -4,49 +4,43 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Liste de courses partagée</title>
+    <title>Liste de courses</title>
     <link
       crossorigin="anonymous"
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css"
     />
+
     <script
       crossorigin="anonymous"
-      src="https://unpkg.com/axios/dist/axios.min.js"
+      src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"
+      defer
     ></script>
 
-    <script type="module" src="./app.js" defer></script>
+    <script src="./main.js" type="module" defer></script>
   </head>
   <body>
     <section class="section">
       <div class="container">
-        <h1 class="title is-1">Liste de courses partagée</h1>
+        <h1 class="title is-1">Liste de courses</h1>
 
-        <form id="shoppingListForm">
-          <h2 class="title is-2"></h2>
+        <h2 class="title is-2">Ajouter un item</h2>
+        <form id="shoppingForm" class="mb-4">
           <div class="field">
-            <label class="label">Produit</label>
-            <div class="control">
-              <input
-                name="itemToBuy"
-                class="input"
-                type="text"
-                placeholder="Text input"
-                autofocus
-              />
-            </div>
+            <label class="label">Item</label>
+            <input
+              title="itemTitle"
+              name="itemTitle"
+              type="text"
+              class="input"
+            />
           </div>
-          <button
-            type="submit"
-            id="addButton"
-            class="button is-primary is-rounded"
-          >
-            Ajouter
-          </button>
+
+          <input class="button is-primary" type="submit" name="submitButton" />
         </form>
 
-        <h2 class="mt-6 title is-2">Acheter</h2>
-        <div id="shoppingList"></div>
+        <h2 class="title is-2">A acheter</h2>
+        <ul id="shoppingList"></ul>
       </div>
     </section>
   </body>
