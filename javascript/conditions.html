@@ -32,16 +32,27 @@
       //difference entre == et ===
       const ageString = "66";
       if (age == ageString) {
-        console.log("les deux sont égales");
+        console.log("avec == age et ageString sont égales");
+      } else {
+        console.log("avec == age et ageString ne sont pas égales");
+      }
+
+      if (age === ageString) {
+        console.log("avec === age et ageString sont égales");
+      } else {
+        console.log("avec === age et ageString ne sont pas égales");
       }
 
       //différence entre null et undefined
       let maVar;
 
+      if (maVar === null) console.log("maVar est nulle");
+      if (maVar === undefined) console.log("maVar est indéfinie");
+
       if (maVar) {
-        console.log("Ma var est définie");
+        console.log("maVar est définie ou non nulle");
       } else {
-        console.log("Ma var est indéfinie");
+        console.log("maVar est indéfinie ou nulle");
       }
 
       // conditions avec switch
